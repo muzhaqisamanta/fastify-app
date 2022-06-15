@@ -1,13 +1,13 @@
-const {getTodoOpts, 
-  getTodosOpts, 
+const {
+  getTodoOpts,
+  getTodosOpts,
   postTodoOpts,
   deleteTodoOpts,
-  updateTodoOpts 
-} = require("./todo/options")
+  updateTodoOpts,
+} = require("./todo/options");
 let todos = require("../todoArray");
 
 const itemRoute = (fastify, options, done) => {
-
   fastify.get("/", getTodosOpts, function (request, reply) {
     reply.send(todos);
   });
@@ -25,7 +25,7 @@ const itemRoute = (fastify, options, done) => {
     reply.code(201).send(Todo);
   });
 
-  fastify.delete("/:id",deleteTodoOpts,  function (request, reply) {
+  fastify.delete("/:id", deleteTodoOpts, function (request, reply) {
     const { id } = request.params;
     todos = todos.filter((todo) => todo.id !== id);
     reply.send(`Todo with id ${id} has been deleted`);

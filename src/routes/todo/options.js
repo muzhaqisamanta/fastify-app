@@ -24,7 +24,7 @@ const getTodosOpts = {
   },
 };
 
-const getTodoOpts =  {
+const getTodoOpts = {
   schema: {
     response: {
       200: Todo,
@@ -85,5 +85,5 @@ module.exports = {
   getTodosOpts,
   postTodoOpts,
   updateTodoOpts,
-  deleteTodoOpts
+  deleteTodoOpts,
 };
