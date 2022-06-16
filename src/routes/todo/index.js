@@ -4,8 +4,8 @@ const {
   postTodoOpts,
   deleteTodoOpts,
   updateTodoOpts,
-} = require("./todo/options");
-let todos = require("../todoArray");
+} = require("./options");
+let todos = require("../../todoArray");
 
 const itemRoute = (fastify, options, done) => {
   fastify.get("/", getTodosOpts, function (request, reply) {
@@ -19,8 +19,8 @@ const itemRoute = (fastify, options, done) => {
   });
 
   fastify.post("/", postTodoOpts, function (request, reply) {
-    const { todo, message } = request.body;
-    const Todo = { id: String, todo, message };
+    const { id, todo, message } = request.body;
+    const Todo = { id, todo, message };
     todos.push(Todo);
     reply.code(201).send(Todo);
   });

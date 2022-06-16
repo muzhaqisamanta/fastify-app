@@ -36,8 +36,9 @@ const postTodoOpts = {
   schema: {
     body: {
       type: "object",
-      required: ["todo", "message"],
+      required: ["id", "todo", "message"],
       properties: {
+        id: { type: "string" },
         todo: { type: "string" },
         message: { type: "string" },
       },
