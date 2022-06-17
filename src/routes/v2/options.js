@@ -38,6 +38,7 @@ const get_options = {
   const post_options = {
     schema: {
       body: {
+        type: "object",
         required: ["name", "description", "gross_amount"],
         properties: {
           name: { type: "string" },
@@ -64,6 +65,7 @@ const get_options = {
   const put_options = {
     schema: {
       body: {
+        type: "object",
         required: ["name", "description"],
         properties: {
           name: { type: "string" },

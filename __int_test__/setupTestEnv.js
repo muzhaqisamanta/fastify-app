@@ -1,4 +1,5 @@
 const { build } = require("../src/app");
+const env = require("../src/config/env");
 
 const setup_tables = `CREATE TABLE IF NOT EXISTS "public"."items" ( \
     "id" SERIAL PRIMARY KEY, \
@@ -19,7 +20,7 @@ module.exports = function setupTestEnv() {
     {},
     {
       connectionString:
-        "postgres://postgres:postgres@127.0.0.1:5432/postgres_test",
+        env.POSTGRES_TEST_DB_CONNECTION_STRING,
     }
   );
 

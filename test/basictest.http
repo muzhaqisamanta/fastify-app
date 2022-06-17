@@ -1,8 +1,8 @@
 ### GET all todos
-GET http://localhost:5000/v1 HTTP/1.1
+GET http://localhost:3000/v1 HTTP/1.1
 
 ### GET a single todo by id
-GET http://localhost:5000/v1/1 HTTP/1.1
+GET http://localhost:3000/v1/1 HTTP/1.1
 
 ###POST a new todo
 POST http://localhost:5000/v1 HTTP/1.1
@@ -26,4 +26,4 @@ Content-Type: application/json
 }
 
 ### DB get time
-GET  http://localhost:5000/time HTTP/1.1
+GET  http://localhost:3000/time HTTP/1.1
