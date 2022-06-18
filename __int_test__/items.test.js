@@ -14,11 +14,22 @@ describe("Integration test for CRUD operations to test our database", () => {
 
     const response = await app.inject({
       method: "POST",
-      url: "/v2",
+      url: "/v2/",
       payload: item,
     });
 
     expect(response.statusCode).toBe(201);
     expect(response.json()).toMatchObject(item);
   });
+
+  test("Should get a list of items", async () => {
+    const response = await app.inject({
+      method: "GET",
+      url: "/v2/",
+    });
+
+    expect(response.statusCode).toBe(200);
+  });
+
+
 });

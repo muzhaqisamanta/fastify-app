@@ -26,7 +26,7 @@ services:
       - .env
     environment:
       POSTGRES_DB_CONNECTION_STRING: '${POSTGRES_DB_CONNECTION_STRING}'
-      POSTGRES_TEMP_DB_CONNECTION_STRING: '${POSTGRES_TEMP_DB_CONNECTION_STRING}'
+      POSTGRES_TEMP_DB_CONNECTION_STRING: '${POSTGRES_TEST_DB_CONNECTION_STRING}'
     depends_on:
       postgres:
         condition: service_healthy

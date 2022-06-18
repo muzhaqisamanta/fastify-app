@@ -20,7 +20,7 @@ module.exports = function setupTestEnv() {
     {},
     {
       connectionString:
-        env.POSTGRES_TEST_DB_CONNECTION_STRING,
+        env.POSTGRES_TEST_DB_CONNECTION_STRING
     }
   );
 
